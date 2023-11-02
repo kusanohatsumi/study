@@ -4,6 +4,7 @@
 
   item.onmousedown = function (event) {
     event.target.style.position = "absolute";
+    event.target.style.zIndex = 1000;
     let shiftY = event.pageY - event.target.getBoundingClientRect().top;
     let shiftX = event.pageX - event.target.getBoundingClientRect().left;
     function mousemove(event) {
