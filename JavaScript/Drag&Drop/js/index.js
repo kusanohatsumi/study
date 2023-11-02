@@ -39,37 +39,5 @@
     console.log("ドロップされた！");
     let cloneItem = item.cloneNode(true);
     target.appendChild(cloneItem, target);
-    // target.style.top = e.pageY + "px";
-    // target.style.left = e.pageX + "px";
   });
-
-  // const test = doc.getElementById("test");
-  // console.log(test.offsetParent.offsetTop);
-  // console.log(test.offsetTop, test.offsetLeft);
-  // test.addEventListener("mousedown", (e) => {
-  //   // test.style.position = "absolute";
-  //   // test.style.top = e.pageY + "px";
-  //   // test.style.left = e.pageX + "px";
-  //   console.log(e.offsetX, e.offsetY);
-  // });
-  // test.addEventListener("mousemove", (e) => {});
-
-  // function mousedown(event) {
-  //   const object = event.target;
-  //   object.style.position = "absolute";
-  //   console.dir(event);
-  //   console.log(event.target.getBoundingClientRect().top);
-  // }
-  // function mousemove(event) {
-  //   item.style.top = event.pageY + "px";
-  //   item.style.left = event.pageX + "px";
-  //   console.log(event.pageX, event.pageY);
-  // }
-
-  // function mouseup(e) {
-  //   console.log("mouseup");
-  // }
-
-  // item.addEventListener("mousedown", mousedown);
-  // window.addEventListener("mousemove", mousemove);
 }
