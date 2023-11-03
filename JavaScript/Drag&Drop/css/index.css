@@ -39,3 +39,9 @@ main {
   background-color: #ccc;
   position: relative;
 }
+
+canvas {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-color: #e5e7ff;
+}

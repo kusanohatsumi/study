@@ -41,3 +41,17 @@
     target.appendChild(cloneItem, target);
   });
 }
+
+// canvas
+{
+  const doc = document;
+  window.onload = () => {
+    // canvas準備
+    const canvas = doc.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.addEventListener("drop", (e) => {
+      e.preventDefault();
+      console.log("ドロップされた！");
+    });
+  };
+}
