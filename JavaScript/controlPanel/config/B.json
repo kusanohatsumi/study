@@ -1,0 +1,96 @@
+[
+  { "id": "top", "title": "トップページ", "data": {} },
+  { "id": "company", "title": "会社概要", "data": {} },
+  {
+    "id": "recruit",
+    "title": "採用情報",
+    "children": [
+      {
+        "name": "新卒採用",
+        "data": [
+          { "title": "title_01", "value": "01" },
+          { "title": "title_02", "value": "02" },
+          { "title": "title_03", "value": "03" },
+          { "title": "title_04", "value": "04" },
+          { "title": "title_05", "value": "05" },
+          { "title": "title_06", "value": "06" },
+          { "title": "title_07", "value": "07" }
+        ]
+      },
+      {
+        "name": "キャリア採用",
+        "data": [
+          { "title": "title_01", "value": "value_01" },
+          { "title": "title_02", "value": "value_02" },
+          { "title": "title_03", "value": "value_03" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "privacy-policy",
+    "title": "プライバシーポリシー",
+    "data": [
+      {
+        "title": "title",
+        "list": [
+          { "id": 1, "title": "title_01" },
+          { "id": 2, "title": "title_02" },
+          { "id": 3, "title": "title_03" },
+          { "id": 4, "title": "title_04" }
+        ]
+      },
+      {
+        "title": "title",
+        "value": [
+          { "id": 1, "text": "text_01" },
+          { "id": 2, "text": "text_02" },
+          { "id": 3, "text": "text_03" },
+          { "id": 4, "text": "text_04" }
+        ]
+      },
+      {
+        "title": "title",
+        "value": [
+          { "id": 1, "text": "text_01" },
+          { "id": 2, "text": "text_02" },
+          { "id": 3, "text": "text_03" },
+          { "id": 4, "text": "text_04" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "site-policy",
+    "title": "サイトポリシー",
+    "data": [
+      {
+        "title": "title",
+        "list": [
+          { "id": 1, "title": "title_01" },
+          { "id": 2, "title": "title_02" },
+          { "id": 3, "title": "title_03" },
+          { "id": 4, "title": "title_04" }
+        ]
+      },
+      {
+        "title": "title",
+        "value": [
+          { "id": 1, "text": "text_01" },
+          { "id": 2, "text": "text_02" },
+          { "id": 3, "text": "text_03" },
+          { "id": 4, "text": "text_04" }
+        ]
+      },
+      {
+        "title": "title",
+        "value": [
+          { "id": 1, "text": "text_01" },
+          { "id": 2, "text": "text_02" },
+          { "id": 3, "text": "text_03" },
+          { "id": 4, "text": "text_04" }
+        ]
+      }
+    ]
+  }
+]
