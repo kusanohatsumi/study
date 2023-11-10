@@ -7,11 +7,13 @@
   const btn = doc.getElementById("btn");
   const url = "../../config/B.json";
 
+  // phpにデータをもらう時、パラメータをつけてGETすれば1つのJSでいける
+
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
       let contents = data;
-      console.log(contents[2].children[0].data);
+      console.log(contents);
       // JSONデータを編集する
       //   編集したいデータを[contents]から抜いた新しい配列
       let newData = contents.filter(function (e) {
