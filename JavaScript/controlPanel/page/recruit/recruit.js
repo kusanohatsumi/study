@@ -8,8 +8,7 @@
   const url = "../../config/B.json";
 
   // phpにデータをもらう時、パラメータをつけてGETすれば1つのJSでいける
-
-  fetch(url)
+  fetch("https://click.ecc.ac.jp/ecc/hkusano/study/cms/php/useJSON/data.json")
     .then((response) => response.json())
     .then((data) => {
       let contents = data;

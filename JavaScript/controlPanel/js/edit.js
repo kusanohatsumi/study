@@ -1,25 +1,25 @@
 {
-  fetch("../config/contents.json")
+  const doc = document;
+  const edit = doc.getElementById("edit");
+  const editItem = doc.getElementById("edit-item");
+  const btn = doc.getElementById("btn");
+
+  const url =
+    "https://click.ecc.ac.jp/ecc/hkusano/study/cms/php/json/data.json";
+  fetch(url)
     .then((response) => response.json())
-    .then((data) => {
-      let contents = data;
-      let top = contents[0].data.text;
-      top = "test";
-      //  データの更新
-      //   編集するデータを省いた新しい配列を作る
-      let newData = contents.filter(function (e) {
-        if (e.name != "company") return true;
-      });
-      //   編集したいデータ
-      let changeData = contents.filter(function (e) {
-        if (e.name === "company") return true;
-      });
-      //  編集
-      // changeData[0].data[0].text = "test";
-      //   編集後のデータを配列に追加
-      newData.push(changeData[0]);
-      //   上書き
-      contents = newData;
-      console.log(contents[1]);
+    .then((res) => {
+      const data = res.data;
+
+      for (let i = 0; i < data.length; i++) {
+        editItem.innerHTML += `
+        <div class = "formItem">
+            <label class="formTtl" for="${data[i].title}">${data[i].title}</label>
+            <textarea id=${data[i].id} class="input" type="text" name="${data[i].title}" value="${data[i].value}">${data[i].value}</textarea>
+        </div>
+        `;
+      }
     });
+
+  console.log("ok");
 }
