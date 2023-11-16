@@ -1,33 +1,34 @@
-[
-  { "id": "top", "title": "トップページ", "data": {} },
-  { "id": "company", "title": "会社概要", "data": {} },
-  {
-    "id": "recruit",
+{
+  "top": { "id": "top", "title": "トップページ", "data": {} },
+  "company": { "id": "company", "title": "会社概要", "data": {} },
+
+  "new": {
+    "id": "new",
     "title": "採用情報",
-    "children": [
-      {
-        "name": "新卒採用",
-        "data": [
-          { "title": "title_01", "value": "01" },
-          { "title": "title_02", "value": "02" },
-          { "title": "title_03", "value": "03" },
-          { "title": "title_04", "value": "04" },
-          { "title": "title_05", "value": "05" },
-          { "title": "title_06", "value": "06" },
-          { "title": "title_07", "value": "07" }
-        ]
-      },
-      {
-        "name": "キャリア採用",
-        "data": [
-          { "title": "title_01", "value": "value_01" },
-          { "title": "title_02", "value": "value_02" },
-          { "title": "title_03", "value": "value_03" }
-        ]
-      }
+    "data": [
+      { "title": "title_01", "value": "01" },
+      { "title": "title_02", "value": "02" },
+      { "title": "title_03", "value": "03" },
+      { "title": "title_04", "value": "04" },
+      { "title": "title_05", "value": "05" },
+      { "title": "title_06", "value": "06" },
+      { "title": "title_07", "value": "07" }
     ]
   },
-  {
+  "career": {
+    "id": "career",
+    "title": "キャリア採用",
+    "data": [
+      { "title": "title_01", "value": "01" },
+      { "title": "title_02", "value": "02" },
+      { "title": "title_03", "value": "03" },
+      { "title": "title_04", "value": "04" },
+      { "title": "title_05", "value": "05" },
+      { "title": "title_06", "value": "06" },
+      { "title": "title_07", "value": "07" }
+    ]
+  },
+  "privacy": {
     "id": "privacy-policy",
     "title": "プライバシーポリシー",
     "data": [
@@ -60,7 +61,7 @@
       }
     ]
   },
-  {
+  "site": {
     "id": "site-policy",
     "title": "サイトポリシー",
     "data": [
@@ -93,4 +94,4 @@
       }
     ]
   }
-]
+}
