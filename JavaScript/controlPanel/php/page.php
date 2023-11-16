@@ -1,16 +1,37 @@
 <?php
-include "data.php";
 $param =$_GET["category"];
+include "./category.php";
 
-$data = json_encode($$param, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
-// データの上書き
-file_put_contents("./json/data.json" , $data);
+// 一覧のデータを取得する
+$all = $contents;
+print_r($all[$param]["data"]);
 
-// 作成したファイルのパーミッションを変更
-// chmod("./json/data.json", 0777);
+// JSON形式で取得
+$paramData = $all[$param];
+$paramTitle = $paramData["title"];
+$paramItem = $all[$param]["data"];
+$length = count($paramItem);
 
-$title = $$param["title"];
+// print_r($all[$param]["data"]);
+
+// データを更新する
+// 保存したデータを読み取る
+$url = "https://click.ecc.ac.jp/ecc/hkusano/study/cms/php/json/item.php";
+$json = file_get_contents($url);
+$updateItem = json_decode($json, true);
+// 一時保存先のデータ
+// print_r($updateItem);
+// カテゴリの[data]にデータを入れる
+// $paramItem = $updateItem;
+
+
+// $all[$param]["data"](元データ) と $updateItem(更新データ) は同じ形式のデータ
+
+print_r($all[$param]["data"] = $all[$param]["data"]);
+
+
+
 
 ?>
 <!DOCTYPE html>
@@ -19,18 +40,24 @@ $title = $$param["title"];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/index.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>サンプル</title>
 </head>
 <body>
     <header>
-        <h1><?php echo $title; ?>ページ</h1>
+        <h1><?php echo $paramTitle; ?>ページ</h1>
     </header>
     <main>
-        <form id="edit">
-            <div id="edit-item"></div>
-            <button id="btn" type="button">保存</button>
+        <form id="edit" action="./item.php" method="POST"  >
+            <div id="edit-item">
+            <?php for ($i=0; $i <$length ; $i++) { ?>
+                <div class="formItem">
+                    <label class="formTtl"  for="<?php echo $all[$param]["data"][$i]["title"] ?>"><?php echo $all[$param]["data"][$i]["title"] ?></label>
+                    <textarea type="text" name="value[]" value="<?php echo $all[$param]["data"][$i]["value"] ?>"><?php echo $all[$param]["data"][$i]["value"] ?></textarea>
+                </div>
+            <?php }; ?>
+            </div>
+            <button id="btn" type="submit">保存</button>
         </form>
     </main>
-    <script src="../js/edit.js" ></script>
 </body>
 </html>
