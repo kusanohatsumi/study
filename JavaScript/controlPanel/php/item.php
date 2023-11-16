@@ -3,8 +3,6 @@
 // フォームから送られてきたデータを取得する
 
 $itemList = $_POST;
-$listTitle = $_POST["title"];
-print_r($itemList);
 $listValue = $_POST["value"];
 
 // データの数
@@ -16,15 +14,13 @@ $array = array();
 $id=-1;
 foreach ($itemList as $item) {
     $id++;
-    print_r($id);
     $item = array(
         "id" => $id,
-        "title" => $listTitle[$id],
         "value" => $listValue[$id],
     );
     $array[] = $item;
 };
-// print_r($array);
+print_r($array);
 // PHPの変数をJSONの形に変える
 $newData = json_encode($array, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 // 作成したディレクトリにファイルを追加し、その中にデータを入れる
